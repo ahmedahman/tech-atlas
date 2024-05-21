@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border1-gradient: linear-gradient(
+    270deg,
+    #0FB7F8 52.49%,
+    #4E5CE7 113.43%,
+  );
+
+  --border2-gradient2: linear-gradient(
+    90deg,
+   #B0E7FD 0%,
+   #263261 24.5%,
+   #387CED 50%,
+   #111445 72.5%,
+   #99D3FA 100%
+  );
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.relative::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 1rem); /* Adjust as needed */
+  height: 100%;
+  background: linear-gradient(90deg, #44BCFF -0.55%, #44B0FF 22.86%, #772DF0 48.36%, #4A41BA 73.33%, #84B5FF 99.34%);
+  z-index: -1;
+  filter: blur(20px); /* Adjust the blur radius as needed */
+  opacity: 0.5; /* Adjust the opacity as needed */
+};
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
